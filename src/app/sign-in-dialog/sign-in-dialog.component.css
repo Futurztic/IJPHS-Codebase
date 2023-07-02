@@ -1,0 +1,110 @@
+body {
+    background-color: #122F37;
+    font-family: Arial, sans-serif;
+    color: #FFF;
+}
+.close{
+    right: 0px;
+    display: flex;
+    align-content:space-between;
+    margin-bottom: 10px;
+}
+.close-btn{
+    display: flex;
+    justify-content: flex-end;
+    
+}
+.mat-button{
+    background-color: #f3f0f0df;
+}
+button{
+    border-radius: 15px;
+}
+
+h1 {
+    flex: 1;
+    text-align: center;
+    margin:0px 20px 20px 20px;
+    color: #122F37;
+}
+a{
+    text-align: center;
+}
+i{
+    font-size:large;
+    vertical-align:middle;
+}
+form {
+    width: 400px;
+    margin: 0 auto;
+    background-color: #FFF;
+    border-radius: 5px;
+    
+}
+label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.oath_btn{
+    margin-top: 10px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+input[type="text"],
+input[type="password"] {
+    font-size: 15px;
+    height: 45px;
+    padding: 10px;
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #dfdfdf;
+}
+input[type="text"]:hover:focus{
+    border-color: #122F37;
+}
+
+input[type="submit"] {
+    width: 100%;
+    display: inline-block;
+    background-color: #FBA63A;
+    color: #FFF;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+.google-btn {
+    display: block;
+    width: 70%;
+    background-color: #122F37;
+    color: #cecece;
+    padding: 7px 20px;
+    border-radius: 25px;
+    border: 2px solid #FFF;
+    margin-top: 20px;
+    cursor: pointer;
+    align-items: center;
+}
+.google-btn:hover {
+    color: #ffffff;
+}
+.apple-btn {
+    display: block;
+    width: 70%;
+    background-color: #122F37;
+    color: #cecece;
+    padding: 7px 20px;
+    border-radius: 25px;
+    border: 2px solid #FFF;
+    margin-top: 20px;
+    cursor: pointer;
+    align-items: center;
+}
+.apple-btn:hover {
+    color: #ffffff;
+}

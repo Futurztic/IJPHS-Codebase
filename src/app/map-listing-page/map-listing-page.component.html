@@ -1,0 +1,135 @@
+<section>
+  <div class="listing-desktop">
+    <div class="btn-container">
+      <button class="btn" (click)="btn_onclick()"> {{!this.isMap ? "Map" : "Listing"}}
+      </button>
+      <button class="btn filterbutton"><img src="assets/images/filter.png">
+      </button>
+
+    </div>
+
+    <div class="map" *ngIf="this.ScreenWidth < 767?this.isMap==true?true:false:true">
+      <google-map height="100%" width="100%" [center]="center" [zoom]="zoom" (mapClick)="moveMap($event)"
+        (mapMousemove)="move($event)">
+        <map-marker #marker="mapMarker" *ngFor="let markerPosition of markerPositions" [position]="markerPosition"
+          [options]="markerOptions" (mapMouseover)="openInfoWindow(marker)">
+          <map-info-window *ngFor="let listing of listings"><a href="#">
+              <div class="map_info">
+                <img [src]="listing.photos[1]" alt="" class="map_image">
+
+                <div class="card-price">
+                  <strong>{{getPrice(listing.listPrice)}}</strong>
+                </div>
+                {{listing.property.bedrooms}} bds | {{listing.property.bathrooms}} bths | {{listing.property.area}}sqft
+              </div>
+            </a>
+          </map-info-window>
+
+        </map-marker>
+
+      </google-map>
+    </div>
+    <div class="listing" *ngIf="this.ScreenWidth < 767?this.isMap==true?false:true:true">
+      <form action="">
+        <div class="search_filter"><input type="checkbox" id="toggle" class="toggleCheckbox" />
+          <label for="toggle" class='toggleContainer'>
+            <div>Buy</div>
+            <div>Rent</div>
+          </label>
+          <div class="search">
+            <div class="textOnInput">
+              <label for="inputText">Type</label>
+              <input type="text" placeholder="Farm House">
+            </div>
+            <div class="f_buttons">
+              <button type="button" href="#" class="button ">
+                Search
+              </button>
+              <button type="button" href="#" class="filterbtn ">
+                <img src="assets/images/filter.png">
+              </button>
+            </div>
+          </div>
+
+
+        </div>
+      </form>
+      <div class="search_result">
+        <h4>Search Result</h4>
+        <p>1 result found</p>
+        <!-- <div class="item">
+          <ngx-skeleton-loader [theme]="{ 'border-radius': '0', height: '50px' }"></ngx-skeleton-loader>
+        </div> -->
+        <!-- <ng-container *ngFor="let listing of listings"> -->
+        <div class="property-list">
+
+          <div class="property-card" *ngFor="let listing of listings">
+
+            <div class="card-banner ">
+              <div class="card-banner inner">
+                <a href="#">
+                  <img [src]="listing.photos[1]" />
+                  <div class="banner-actions">
+
+                    <span><i class='bx bxs-camera'> 1/{{this.listing.photos.length}}</i></span>
+                  </div>
+                </a>
+              </div>
+
+              <button type="button" class="btn-prev" (click)="change('right')">
+                <span class="prev-icon"></span>
+              </button>
+              <button type="button" class="btn-next" (click)="change('left')">
+                <span class="next-icon"></span>
+              </button>
+
+            </div>
+
+            <div class="card-content">
+              <div class="card-price">
+                <strong>{{getPrice(listing.listPrice)}}</strong>
+              </div>
+              <ul class="card-list">
+                <li class="card-item">
+                  <div class="item-row">
+                    <i class='bx bx-bed'></i>
+                    <strong>{{listing.property.bedrooms}}</strong>
+                  </div>
+                  <span>Bedrooms</span>
+                </li>
+                <li class="card-item">
+                  <div class="item-row">
+                    <i class='bx bx-bath'></i>
+                    <strong>{{listing.property.bathrooms}}</strong>
+                  </div>
+                  <span>Bathrooms</span>
+                </li>
+                <li class="card-item">
+                  <div class="item-row">
+                    <i class='bx bx-shape-square'></i>
+                    <strong>{{listing.property.area}}</strong>
+                  </div>
+                  <span>Square Ft</span>
+                </li>
+              </ul>
+            </div>
+            <div class="card-footer">
+              <div class="card-location">
+                <i class='bx bx-map'></i>
+                <p>{{
+                  listing.address.full +
+                  ", " +
+                  listing.address.city +
+                  ", " +
+                  listing.address.state
+                  }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</section>

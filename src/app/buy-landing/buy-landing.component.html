@@ -1,0 +1,143 @@
+<section>
+
+  <div class="buy_page">
+    <section id="banner">
+      <div class="content">
+        <header>
+          <h1>Semper arcu mauris aliquam lacus. </h1>
+        </header>
+        <p>Semper arcu mauris aliquam lacus. Massa erat vitae ultrices pharetra scelerisque. Ipsum, turpis facilisis
+          tempor pulvinar in lobortis ornare magna.</p>
+        <div class="achivements">
+          <div class="a-col">
+            <p class="a-text">Previous Projects</p>
+            <h1 class="a-h1">34+</h1>
+          </div>
+          <div class="a-col">
+            <p class="a-text">Years Experience</p>
+            <h1 class="a-h1">10y</h1>
+          </div>
+
+        </div>
+      </div>
+      <span class="image object">
+        <img src="assets/images/buy-image.jpg" alt="" />
+      </span>
+    </section>
+    <div class="listing">
+      <form action="">
+        <div class="search_filter">
+          <div class="textOnInput">
+            <label for="inputText">Search</label>
+            <input type="search" placeholder="Location">
+          </div>
+          <div class="textOnInput">
+            <label for="inputText">But/Rent</label>
+            <input type="text" placeholder="Buy">
+          </div>
+          <div class="textOnInput">
+            <label for="inputText">Type</label>
+            <input type="text" placeholder="Farm House">
+          </div>
+          <div class="f_buttons">
+            <button type="button" href="#" class="button">
+              Search
+            </button>
+            <button type="button" href="#" class="filterbtn">
+              <img src="assets/images/filter.png">
+            </button>
+          </div>
+
+        </div>
+      </form>
+      <div class="search_result">
+        <h4>Search Result</h4>
+        <p>1 result found</p>
+        <div class="item">
+          <!-- <ngx-skeleton-loader [theme]="{ 'border-radius': '0', height: '50px' }"></ngx-skeleton-loader> -->
+        </div>
+        <!-- <ng-container  > -->
+
+        <div class="property-list">
+          <div class="property-card"  *ngFor="let listing of listings">
+            
+            <div class="card-banner ">
+              <div class="card-banner inner" >
+                <a href="#">
+                <img [src]="listing.photos[1]"/>
+                <div class="banner-actions">
+
+                  <span><i class='bx bxs-camera'> 1/{{this.listing.photos.length}}</i></span>
+                </div>
+                </a>
+              </div>
+
+              <button type="button" class="btn-prev" (click)="change('right')">
+                <span class="prev-icon"></span>
+              </button>
+              <button type="button" class="btn-next" (click)="change('left')">
+                <span class="next-icon"></span>
+              </button>
+
+            </div>
+
+            <div class="card-content">
+              <div class="card-price">
+                <strong>{{getPrice(listing.listPrice)}}</strong>
+              </div>
+              <ul class="card-list">
+                <li class="card-item">
+                  <div class="item-row">
+                    <i class='bx bx-bed'></i>
+                    <strong>{{listing.property.bedrooms}}</strong>
+                  </div>
+                  <span>Bedrooms</span>
+                </li>
+                <li class="card-item">
+                  <div class="item-row">
+                    <i class='bx bx-bath'></i>
+                    <strong>{{listing.property.bathrooms}}</strong>
+                  </div>
+                  <span>Bathrooms</span>
+                </li>
+                <li class="card-item">
+                  <div class="item-row">
+                    <i class='bx bx-shape-square'></i>
+                    <strong>{{listing.property.area}}</strong>
+                  </div>
+                  <span>Square Ft</span>
+                </li>
+              </ul>
+            </div>
+            <div class="card-footer">
+              <div class="card-location">
+                <i class='bx bx-map'></i>
+                <p>{{
+                  listing.address.full +
+                  ", " +
+                  listing.address.city +
+                  ", " +
+                  listing.address.state
+                  }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+    <div class="quote">
+      <h1 class="double_quotes">,,</h1>
+      <div class="quote_text">
+        <h3>Dream house isn’t dream anymore</h3>
+        <p>Semper arcu mauris aliquam lacus. Massa erat vitae ultrices pharetra scelerisque. Ipsum, turpis facilisis
+          tempor pulvinar.</p>
+      </div>
+    </div>
+
+  </div>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</section>

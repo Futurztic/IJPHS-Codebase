@@ -1,0 +1,182 @@
+h1 {
+  color: var(--title-color);
+  font-size: 40px;
+  font-weight: 400;
+}
+
+p {
+  color: var(--text-color);
+}
+
+.editor_page {
+  width: 100%;
+  background-color: white;
+  display: block;
+}
+
+#banner {
+  padding: 10em 10% 4em 10%;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
+}
+
+#banner h1 {
+  margin-top: -0.125em;
+}
+
+#banner .content {
+  -moz-flex-grow: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-grow: 1;
+  flex-grow: 1;
+  -moz-flex-shrink: 1;
+  -webkit-flex-shrink: 1;
+  -ms-flex-shrink: 1;
+  flex-shrink: 1;
+  width: 50%;
+}
+
+
+@media screen and (orientation: portrait) and (max-width: 480px) {
+  #banner {
+    padding: 6em 10% 4em 10%;
+  }
+}
+
+
+
+/* ==============editor-card-content============ */
+
+.row{
+  display: block;
+  padding-block: var(--section-padding);
+  padding: 4em 10% 4em 10%;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+h2 {
+  color: var(--title-color);
+  font-size: 20px;
+  font-weight: 400;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  flex: 1;
+  border-radius: 10px;
+  margin: 0px 5px 10px ;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #474e5d;
+  color: white;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+p.title {
+  color: grey;
+}
+
+p {
+  color: black;
+  padding-bottom: 5%;
+}
+
+.card img {
+  width:100%;
+}
+
+.card img.fixed-height{
+  position: absolute;
+    top:-100%; left:0; right: 0; bottom:-100%;
+    margin: auto;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color:  #FBA63A;;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #122F37;
+}
+
+hr {
+  display: block;
+  width: 60%;
+  margin-right: auto;
+  margin-left: auto;
+  border: 1px inset;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .row {
+    display: block;
+
+  }
+
+  .column {
+    flex: 0 0 100%;
+    max-width: 100%;
+
+  }
+  .card .container p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}

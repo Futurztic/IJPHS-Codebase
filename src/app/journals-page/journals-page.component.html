@@ -1,0 +1,90 @@
+<div class="journalpage">
+
+
+  <div class="landing">
+
+    <main class="main">
+      <section class="journal section" id="journal">
+        <div class="journal__container container ">
+          <div class="journal__data">
+            <h1 class="journal__title">
+              JOURNALS</h1>
+
+        </div>
+        </div>
+      </section>
+
+      <div class="listing">
+      <div class="search_result">
+        <div class="item">
+          <!-- <ngx-skeleton-loader [theme]="{ 'border-radius': '0', height: '50px' }"></ngx-skeleton-loader> -->
+        </div>
+        <!-- <ng-container  > -->
+
+        <div class="property-list">
+          <div class="property-card"  *ngFor="let listing of listings">
+
+            <div class="card-banner ">
+              <div class="card-banner inner" >
+                <a href="#">
+                <img src="assets/images/Medical_Journal_cover.jpg"/>
+                <div class="banner-actions">
+
+                 <!-- <span><i class='bx bxs-camera'> 1/{{this.listing.photos.length}}</i></span> -->
+                </div>
+                </a>
+              </div>
+
+              <!-- <button type="button" class="btn-prev" (click)="change('right')">
+                <span class="prev-icon"></span>
+              </button>
+              <button type="button" class="btn-next" (click)="change('left')">
+                <span class="next-icon"></span>
+              </button> -->
+
+            </div>
+
+            <div class="card-content">
+              <div class="card-price">
+                <strong>Journal Title</strong>
+              </div>
+              <ul class="card-list">
+                <li class="card-item">
+                  <div class="item-row">
+                    <i class='bx bx-user-circle'></i>
+                    <strong>Author</strong>
+                  </div>
+                </li>
+                <li class="card-item">
+                  <div class="item-row">
+                    <i class='bx bxs-group'></i>
+                    <strong>Editorial Board</strong>
+                  </div>
+                </li>
+                <li class="card-item">
+                  <div class="item-row">
+                    <i class='bx bx-time-five'></i>
+                    <strong>Published Date</strong>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="card-footer">
+              <div class="card-location">
+                <p><strong>Price: {{getPrice(listing.listPrice)}}</strong></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+
+</main>
+</div>
+</div>

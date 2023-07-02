@@ -1,0 +1,78 @@
+<!-- ==================== HEADER ==================== -->
+    <header class="header" id="header">
+      <nav class="nav container">
+        <a href="#" class="nav__logo">
+          <img class="koselogo"  alt="">
+        </a>
+        <!-- <form *ngIf="router.url !== '/'" action="" class="home__search">
+          <input type="search" placeholder="Search by location..." class="home__search-input">
+          <button class="Searchbutton">
+            <img src="/assets/images/arrowupright.svg">
+          </button>
+        </form> -->
+        <div class="nav__menu">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="" class="nav__link">
+                <i class='bx bx-home-alt-2'></i>
+                <span>Home</span>
+              </a>
+            </li>
+            <li class="nav__item">
+
+              <a [routerLink]="about" class="nav__link" >
+                <i class="bx bx-building-house"></i>
+                <span>About Us</span>
+              </a>
+            </li>
+            <li class="nav__item">
+              <a [routerLink]="journals" class="nav__link">
+                <i class="bx bx-award"></i>
+                <span>Journals</span>
+              </a>
+            </li>
+            <li class="nav__item">
+              <a [routerLink]="blogs" class="nav__link">
+                <i class="bx bx-blogger"></i>
+                <span>Blogs</span>
+              </a>
+            </li>
+            <li class="nav__item">
+              <a [routerLink]="editorial" class="nav__link">
+                <i class="bx bx-blogger"></i>
+                <span>Editors</span>
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#contact" class="nav__link">
+                <i class="bx bx-phone"></i>
+                <span>Contact</span>
+              </a>
+            </li>
+            <li><button class="button nav__button" mat-button (click)="openDialog()">
+              SignUp/SignIn
+            </button></li>
+          </ul>
+        </div>
+
+        <!--Theme change button -->
+        <!-- <i class="bx bx-moon change-theme" id="theme-button"></i> -->
+
+
+        <div class="nav_mobile">
+        <input type="checkbox" name="" id="" class="check">
+        <ul class="menu-items">
+          <li><a href="">Home</a></li>
+          <li><a href="about" >About Us</a></li>
+          <li><a href="journals">Journals</a></li>
+          <li><a href="blogs">Blogs</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="ham-menu">
+          <span class="line line1"></span>
+          <span class="line line2"></span>
+          <span class="line line3"></span>
+        </div>
+      </div>
+      </nav>
+    </header>
